@@ -1,23 +1,22 @@
-tile_downloader - Google maps tile downloader shell script
+# tile_downloader - Google maps tile downloader shell script
 ===============
 This script downloads tiles from google maps and glues them together into one png file.
 
-===============
-Requirements
+
+# Requirements
 ===============
 - curl
 - python installation
 - imagemagick -> montage
 
-===============
-Usage
+
+# Usage
 ===============
 - >>sh tile_downloader.sh 52.540266,13.372547 52.518545,13.448078 18 s
 - >>sh tile_downloader.sh left_upper_corner right_lower_corner zoom_level map_or_satellite
 - Coordinates from google maps -> right click in designated area -> What's here?
 
-Zoom level für Map
-===============
+## Zoom level für Map
 - 18 - 20m/100ft
 - 17 - 20m/50ft
 - 16 - 50m
