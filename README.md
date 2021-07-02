@@ -14,7 +14,7 @@ This script downloads tiles from google maps and glues them together into one pn
 ===============
 - >>sh tile_downloader.sh 52.540266,13.372547 52.518545,13.448078 18 s
 - >>sh tile_downloader.sh left_upper_corner right_lower_corner zoom_level map_or_satellite
-- Coordinates from google maps -> right click in designated area -> What's here?
+- Coordinates from google maps -> right click in designated area -> Just click on coordinates to copy to clipboard
 
 ## Zoom level für Map
 - 20 - 5m
