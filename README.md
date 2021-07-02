@@ -17,6 +17,8 @@ This script downloads tiles from google maps and glues them together into one pn
 - Coordinates from google maps -> right click in designated area -> What's here?
 
 ## Zoom level für Map
+- 20 - 5m
+- 19 - 5m
 - 18 - 20m/100ft
 - 17 - 20m/50ft
 - 16 - 50m

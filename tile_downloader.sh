@@ -11,6 +11,8 @@ echo "
 # Koordinaten aus google maps -> "Was ist hier?"
 
 # zoom level für Map 
+# 20 - 5m
+# 19 - 5m
 # 18 - 20m/100ft
 # 17 - 20m/50ft
 # 16 - 50m
@@ -78,7 +80,7 @@ echo $divx
 echo $divy
 
 
-# Satellite: http://khm0.google.at/kh/v=80&x=[ TILE-X ]&y=[ TILE-Y ]&z=[ ZOOM ]
+# Satellite: https://khms1.google.com/kh/v=904&x=[ TILE-X ]&y=[ TILE-Y ]&z=[ ZOOM ]
 # Map: http://mt0.google.com/vt/lyrs=m@146&hl=de&x=[ TILE-X ]&y=[ TILE-Y ]&z=[ ZOOM ]
 # Terrain: http://mt1.google.com/vt/lyrs=t@126,r@146&hl=de&x=[ TILE-X ]&y=[ TILE-Y ]&z=[ ZOOM ]
 # Transparent Map: http://mt0.google.com/vt/lyrs=h@146&hl=de&x=[ TILE-X ]&y=[ TILE-Y ]&z=[ ZOOM ]
@@ -87,9 +89,10 @@ echo "------"
 for (( x=$xtilelu; x<=$xtilerd; x++ )); do
     for (( y=$ytilelu; y<=$ytilerd; y++ )); do
         if [[ $4 == "s" ]]; then
-            curl -s "https://khm0.google.at/kh/v=142&x=$x&y=$y&z=$z" -o "$y+$x.png"
+            curl  "https://khms1.google.com/kh/v=904&x=$x&y=$y&z=$z" -o "$y+$x.png"
+            #https://khms1.google.com/kh/v=904?x=565087&y=348646&z=20
         else
-            curl -s "http://mt0.google.com/vt/lyrs=m@146&hl=de&x=$x&y=$y&z=$z" -o "$y+$x.png"
+            curl  "http://mt0.google.com/vt/lyrs=m@146&hl=de&x=$x&y=$y&z=$z" -o "$y+$x.png"
         fi
         #curl -s "https://khm0.google.at/kh/v=142&x=$x&y=$y&z=$z" -o "$y+$x.png"
         # curl -s "http://mt0.google.com/vt/lyrs=m@146&hl=de&x=$x&y=$y&z=$z" -o "$y+$x.png"
